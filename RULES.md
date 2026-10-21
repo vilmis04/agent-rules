@@ -12,6 +12,8 @@ You are reading this file because the user's global agent settings instructed yo
 
 If the user uses the word **"remember"** in the context of saving a rule, preference, or guideline discussed in the chat, you must execute the following steps:
 
+> **Cloud sessions:** If you are running in a cloud session (no access to the user's machine), do **not** try to create or edit `~/PROJECTS/global-agent-rules.md` or any other local file. Run the `update-global-rules` skill (`skills/update-global-rules/SKILL.md` in `vilmis04/agent-rules`) instead: it follows the steps below against `RULES.md` in that repo and opens a PR with the change. The same skill runs whenever the user says **"update global rules"**.
+
 1. Extract the core technical rule, formatting guideline, or workflow preference just discussed.
 2. Formulate it as a concise, direct instruction.
 3. Open this exact file using its path: `~/PROJECTS/global-agent-rules.md` and search **Dynamic Global Rules** (and related sections if the topic clearly belongs there) for an existing rule that matches or is very similar in meaning.
